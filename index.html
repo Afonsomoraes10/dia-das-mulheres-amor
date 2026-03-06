@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Para Você Jhuly Meu Amor❤️</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background: #eeadc7;
+            overflow-x: hidden;
+        }
+
+        #mensagem {
+            display: none;
+            font-size: 24px;
+            margin-top: 50px;
+        }
+
+        /* elementos que caem */
+        .coracao {
+            position: fixed;
+            top: -20px;
+            font-size: 28px;
+            animation: cair linear forwards;
+        }
+
+        /* animação */
+        @keyframes cair {
+            0% {
+                transform: translateY(-20px);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="contador"></h1>
+
+    <div id="mensagem">
+        <h2>Feliz Dia das Mulheres Meu amorrr❤️</h2> <img src="img/WhatsApp Image 2026-03-06 at 11.49.54.jpeg"
+            width="500">
+        <p>Você chegou para mudar minha vida.</p>
+        <p>Obrigado por existir e por estar comigo mesmo de longe.</p>
+        <p>Não tenho palavras para descrever meu amor por você, vc simplimente me faz sentir vontande de acordar todo
+            dia de manhã alegre pos você é o meu motivo de felicidade diaria.</p>
+        <p>Ahhh se Você soubesse o quão feliz eu fico quando vejo vc, escutar sua voz, poder vê esse seu rostinho, ainda
+            mais quando voce esta sorrindo. Ahhh esse olhar, é um tiro certeiro no meu coração, acho que se um dia
+            alguem me perguntar, qual a ultima coisa que você deseja vê, que lhe deixara feliz, e curar tudo em vc, eu
+            sem duvidas responderia que gostaria de vê vc, pq vc é a minha cura, e minha felicidades. Uma vez você me
+            perguntou oque eu gostaria de lhe falar caso fosse a ultima vez que eu lhe visse, e eu respondi, que meu
+            maior desejo era poder vê sua melhor versão de se. E por favor Jhuly meu amor, me dê essa oportunidade, eu
+            irei ficar ao seu lado, ate um dia você, simplemente conseguir ser quem vc é de verdade, pos so vc e Deus,
+            sabe oq vc ja passou ate agora.</p> 
+            <img src="img/WhatsApp Image 2026-03-06 at 11.51.18.jpeg" width="500">
+        <p>Hoje é Dia das Mulheres, mas a verdade é que eu agradeço por você existir todos os dias. Você talvez não
+            perceba, mas é uma das pessoas mais fortes que eu já conheci. Mesmo carregando tantas coisas dentro de você,
+            mesmo tendo passado por momentos difíceis, você continua sendo essa mulher incrível, com um coração enorme,
+            que se importa, que sente muito e que ainda encontra forças pra amar. Eu admiro muito isso em você.<br><br>
+            Admiro a sua sensibilidade, o seu jeito único, até as suas inseguranças que você tenta esconder… porque elas
+            mostram o quanto seu coração é verdadeiro. Você não é perfeita, e nem precisa ser. Pra mim, você já é
+            especial exatamente do jeito que é.<br><br> Eu só quero que você saiba que eu me sinto muito sortudo por ter
+            você na minha vida.<br> E independente de qualquer coisa, eu sempre vou estar aqui, torcendo por você, te
+            apoiando e querendo ver você feliz. Feliz Dia das Mulheres, minha princesa.<br> Você é uma mulher incrível,
+            muito mais forte e especial do que imagina. ❤️</p>
+             <img src="img/WhatsApp Image 2026-03-06 at 11.51.20.jpeg"
+            width="500">
+        <p><b>Te amo MUITOOOOOOOOOOOOO, minha gata! 💖</b></p>
+    </div>
+
+    <script>
+
+        var dataLiberacao = new Date("Mar 8, 2026 00:00:00").getTime();
+
+        var x = setInterval(function () {
+
+            var agora = new Date().getTime();
+            var distancia = dataLiberacao - agora;
+
+            var dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+            var horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+            var segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+            document.getElementById("contador").innerHTML =
+                "Abra em: " + dias + "d " + horas + "h " + minutos + "m " + segundos + "s";
+
+            if (distancia < 0) {
+
+                clearInterval(x);
+
+                document.getElementById("contador").style.display = "none";
+                document.getElementById("mensagem").style.display = "block";
+
+                /* inicia chuva */
+                chuva();
+
+            }
+
+        }, 1000);
+
+
+        /* função que cria corações e flores */
+        function chuva() {
+
+            setInterval(function () {
+
+                var simbolos = ["❤️", "💖", "🌸", "🌹", "💗"];
+
+                var elemento = document.createElement("div");
+                elemento.classList.add("coracao");
+
+                elemento.innerHTML = simbolos[Math.floor(Math.random() * simbolos.length)];
+
+                elemento.style.left = Math.random() * 100 + "vw";
+                elemento.style.animationDuration = (Math.random() * 3 + 3) + "s";
+
+                document.body.appendChild(elemento);
+
+                setTimeout(function () {
+                    elemento.remove();
+                }, 6000);
+
+            }, 300);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
